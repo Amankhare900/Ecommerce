@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./reset.css" />
+    <title>reset password</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="innerContainer">
+        <header>
+          <h1>Reset Password</h1>
+        </header>
+        <main>
+          <div class="data">
+            <form method="POST" action="/reset">
+              <% if(!isVerified){ %>
+              <input
+                placeholder="email"
+                class="input"
+                type="email"
+                name="email"
+                required
+              />
+
+              <% }else{ %>
+              <input
+                placeholder="OTP"
+                class="input"
+                type="otp"
+                name="otp"
+                required
+              />
+              <input
+                placeholder="password"
+                name="password"
+                class="input"
+                type="password"
+                required
+              />
+              <input
+                placeholder="confirm password"
+                name="confirmPassword"
+                class="input"
+                type="password"
+                required
+              />
+              <%} %> <% if(error!==""){ %>
+              <label for="username"><%= error %></label>
+              <% } %>
+
+              <input id="submit" type="submit" value="reset" />
+            </form>
+          </div>
+
+          <a href="/login">Login</a>
+        </main>
+      </div>
+    </div>
+  </body>
+</html>

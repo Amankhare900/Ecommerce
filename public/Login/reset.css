@@ -1,0 +1,103 @@
+body {
+  background-color: #151515;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 740px;
+  color: #191825;
+  background-image: linear-gradient(to bottom right, #a3ffc8, #57a375);
+}
+.innerContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 25%;
+  min-height: 60%;
+  background-color: #a3ffc8;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 10px;
+  border: none;
+  background-color: #191825;
+  color: whitesmoke;
+  font-weight: bolder;
+  margin-top: 1em;
+  padding: 5px;
+  font-size: 20px;
+  transition: all 0.3s ease;
+}
+a:hover {
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.6);
+  transform: translateY(-2px);
+
+  background-color: #a3ffc8;
+  color: #191825;
+}
+
+a:active {
+  transform: translateY(-1px);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  background-color: #191825;
+  color: whitesmoke;
+}
+.reset {
+  text-decoration: none;
+  font-size: 15px;
+  position: relative;
+  left: 60%;
+}
+label {
+  margin-top: 5px;
+}
+
+.input {
+  margin-top: 1rem;
+  font-size: 15px;
+  padding: 8px;
+  text-decoration: none;
+  width: 100%;
+  border-radius: 10px;
+  border: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1) inset;
+}
+#submit {
+  font-size: 20px;
+  margin-top: 1em;
+  border-radius: 10px;
+  padding: 8px;
+  width: 100%;
+  border: none;
+  font-weight: bolder;
+  background-color: #191825;
+  color: whitesmoke;
+  transition: all 0.3s ease;
+}
+#submit:hover {
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.6);
+  transform: translateY(-2px);
+  background-color: #a3ffc8;
+  color: #191825;
+}
+
+#submit:active {
+  transform: translateY(-1px);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  background-color: #191825;
+  color: whitesmoke;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* width: 70%; */
+  /* margin-top: ; */
+}

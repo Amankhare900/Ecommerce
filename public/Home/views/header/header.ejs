@@ -1,0 +1,28 @@
+<head>
+  <link rel="stylesheet" href="../../header.css" />
+</head>
+<div class="container">
+  <div class="navbar">
+    <%if(isAdmin ===""){%>
+    <a class="logo" href="/product">E-Commerce</a>
+    <%}else{%>
+    <a class="logo" href="/admin">Admin</a>
+    <%}if(username !=="" && isAdmin ===""){%>
+    <h2 class="username"><%= username%></h2>
+    <%}%> <%if(isLoggedIn !==""){%>
+    <div>
+      <%if(isAdmin === ""){%>
+      <a class="cart headerButton" href="/cart">My Cart</a>
+      <a class="reset headerButton" href="/reset">Change Password?</a>
+      <%}%>
+      <a class="headerButton" href="/logout">logout</a>
+    </div>
+    <%}else{%>
+
+    <a class="headerButton" href="/login">login?</a>
+    <%}%>
+    <!-- <span class="fa-passwd-reset fa-stack"> -->
+    <!-- <i class="fa fa-undo fa-stack-2x"></i> -->
+    <!-- </span> -->
+  </div>
+</div>

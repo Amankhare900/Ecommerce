@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Login</title>
+  </head>
+  <body>
+    <%- include('../Home/views/header/header.ejs', {username: username,
+    isLoggedIn: isLoggedIn}) %>
+    <div class="outerContainer">
+      <div class="innerContainer">
+        <header>
+          <h1>Welcome Back</h1>
+        </header>
+        <main>
+          <div class="data">
+            <form method="POST" action="/login">
+              <p>Welcome Back!Please Enter Your Details</p>
+              <!-- name will be use as a key in json -->
+              <input
+                placeholder="email"
+                class="input"
+                type="email"
+                name="email"
+                required
+              />
+              <input
+                placeholder="password"
+                class="input"
+                name="password"
+                type="password"
+                required
+              />
+              <span class="fa-passwd-reset fa-stack">
+                <!-- <i class="fa fa-undo fa-stack-2x"></i> -->
+                <a class="reset button" href="/reset">Forgot Password?</a>
+              </span>
+              <img src="" alt="" style="width: 18px; opacity: 0.7" />
+              <% if(error!==""){ %>
+              <label for="username"><%= error %></label>
+              <% } %>
+              <input id="submit" type="submit" value="login" />
+            </form>
+          </div>
+          <a class="button" href="/signup">Signup</a>
+        </main>
+      </div>
+    </div>
+  </body>
+</html>

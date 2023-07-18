@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../product.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <%- include('../header/header', {username: username, isLoggedIn: isLoggedIn,
+    isAdmin:isAdmin}) %>
+    <div class="des-outer-container">
+      <div class="description-container"></div>
+    </div>
+    <div class="item-container"></div>
+    <div class="loading">
+      <button class="load">load more</button>
+    </div>
+    <script src="../../product.js"></script>
+  </body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>SignUp</title>
+  </head>
+  <body>
+    <%- include('../Home/views/header/header.ejs', {username: username,
+    isLoggedIn: isLoggedIn}) %>
+    <div class="outerContainer">
+      <div class="innerContainer">
+        <header>
+          <h1>Sign Up</h1>
+          <div class="passwordConstrain">
+            <p class="passwordInfoP">
+              1.At least one uppercase or lowercase letter.
+            </p>
+            <p class="passwordInfoP">2.At least one digit.</p>
+            <p class="passwordInfoP">
+              3.At least one special character from the set @$!%*#?&.
+            </p>
+            <p class="passwordInfoP">4.Minimum length of 8 characters.</p>
+          </div>
+        </header>
+        <main>
+          <div class="data">
+            <form method="POST" action="/signup">
+              <input
+                placeholder="Name"
+                class="input"
+                name="username"
+                required
+              />
+
+              <input
+                placeholder="number"
+                class="input"
+                type="tel"
+                name="number"
+                required
+              />
+              <input
+                placeholder="email"
+                class="input"
+                type="email"
+                name="email"
+                required
+              />
+              <input
+                placeholder="address"
+                class="input"
+                name="address"
+                required
+              />
+              <input
+                placeholder="password"
+                name="password"
+                class="input"
+                type="password"
+                required
+              />
+              <% if(error!==""){ %>
+              <label for="username"><%= error %></label>
+              <% } %>
+              <input id="submit" type="submit" value="signup" />
+            </form>
+          </div>
+          <a class="button" href="/login">Login</a>
+        </main>
+      </div>
+    </div>
+  </body>
+</html>

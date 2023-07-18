@@ -1,0 +1,126 @@
+body {
+  background-image: linear-gradient(
+    to bottom right,
+    rgb(244, 226, 168),
+    rgb(210, 184, 100)
+  );
+}
+.item-container {
+  margin: 90px 0 0 0;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.des-outer-container {
+  display: flex;
+  justify-content: center;
+}
+
+.description-container {
+  display: none;
+  text-align: center;
+  z-index: 2;
+  padding: 60px 10px 0;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-sizing: border-box;
+  border-radius: 10px;
+  opacity: 0.8;
+  width: 80%;
+  max-width: 500px;
+  transition: opacity 0.3s ease-in-out;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.product {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 5px;
+  margin: 5px;
+  padding: 20px;
+  background-color: rgb(244, 224, 156);
+  position: relative;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.load {
+  font-size: 20px;
+  margin: 1em auto 1em auto;
+  border-radius: 10px;
+  padding: 8px;
+  width: 15%;
+  border: none;
+  font-weight: bolder;
+  background-color: #191825;
+  color: whitesmoke;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.load:hover {
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.6);
+  transform: translateY(-3px);
+  background-color: rgb(210, 184, 100);
+  color: #191825;
+}
+
+.load:active {
+  transform: translateY(-1px);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+  background-color: #191825;
+  color: whitesmoke;
+}
+
+.buttons {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.button {
+  font-size: 20px;
+  margin-top: 1em;
+  margin-bottom: 0.5em;
+  border-radius: 10px;
+  padding: 8px;
+  display: inline-block;
+  width: 60%;
+  border: none;
+  font-weight: 500;
+  background-color: #191825;
+  color: whitesmoke;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.button:hover {
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.6);
+  transform: translateY(-2px);
+  font-weight: 600;
+  background-color: #ffd3a3;
+  color: #191825;
+}
+
+.button:active {
+  transform: translateY(-1px);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.6);
+  background-color: #ffd3a3;
+  color: white;
+}
+
+img {
+  width: 100%;
+  max-width: 200px;
+  height: 120px;
+}

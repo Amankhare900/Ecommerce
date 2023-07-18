@@ -1,0 +1,77 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./admin.css" />
+    <title>Admin Page</title>
+  </head>
+  <body>
+    <div class="outercontainer">
+      <div class="innerContainer">
+        <header>
+          <h1>Admin Page</h1>
+        </header>
+        <main>
+          <div class="data">
+            <form
+              method="POST"
+              action="/admin?<%=data[0].id%>&<%=otp%>"
+              enctype="multipart/form-data"
+            >
+              <input
+                placeholder="productName"
+                class="input"
+                value="<%= data[0].title %>"
+                name="name"
+                required
+              />
+              <input
+                placeholder="productCategory"
+                class="input"
+                name="category"
+                value="<%= data[0].category %>"
+                required
+              />
+              <input
+                placeholder="product Description"
+                class="input"
+                name="description"
+                value="<%= data[0].description %>"
+                required
+              />
+              <input
+                placeholder="product Price"
+                class="input"
+                name="price"
+                value="<%= data[0].price %>"
+                required
+              />
+
+              <input
+                placeholder="product Quantity"
+                class="input"
+                name="quantity"
+                value="<%= data[0].stock %>"
+                required
+              />
+              <input
+                type="file"
+                class="input"
+                name="image"
+                value="<%= data[0].image %>"
+                required
+              />
+              <% if(error!==""){ %>
+              <label for="username"><%= error %></label>
+              <% } %>
+              <a class="button" href="/dashboard">dashboard</a>
+              <input id="submit" type="submit" value="submit" />
+            </form>
+          </div>
+        </main>
+      </div>
+    </div>
+    <script src="admin.js"></script>
+  </body>
+</html> -->

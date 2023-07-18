@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./admin.css" />
+    <title>Admin Page</title>
+  </head>
+  <body>
+    <!-- Include the header -->
+    <%- include('../Home/views/header/header.ejs', {username: username,
+    isLoggedIn: isLoggedIn, isAdmin:isAdmin}) %>
+    <div class="outercontainer">
+      <div class="innerContainer">
+        <header>
+          <h1>Admin Page</h1>
+        </header>
+        <main>
+          <div class="data">
+            <form
+              method="POST"
+              action="<%= data ? '/updateProduct?id=' + data[0].id+'&image='+data[0].images : '/admin' %>"
+              enctype="multipart/form-data"
+            >
+              <input
+                type="text"
+                class="input"
+                name="name"
+                value="<%= data ? data[0].title : '' %>"
+                required
+              />
+
+              <input
+                type="text"
+                class="input"
+                name="category"
+                value="<%= data ? data[0].category : '' %>"
+                required
+              />
+              <textarea id="textarea" class="input" name="description" required>
+                <%= data ? data[0].description.trim() : '' %>
+              </textarea>
+
+              <input
+                type="number"
+                class="input"
+                name="price"
+                value="<%= data ? data[0].price : '' %>"
+                required
+              />
+              <input
+                type="number"
+                class="input"
+                name="quantity"
+                value="<%= data
+              ? data[0].stock : '' %>"
+                required
+              />
+
+              <%if(data){%>
+              <input type="file" class="input" name="image" />
+              <%}else{%>
+              <input type="file" class="input" name="image" required />
+              <%}%> <%if (error) { %>
+              <p class="error-message"><%= error %></p>
+              <% } %>
+
+              <a class="button" href="/dashboard">Dashboard</a>
+              <input id="submit" type="submit" value="Submit" />
+            </form>
+          </div>
+        </main>
+      </div>
+    </div>
+
+    <script src="admin.js"></script>
+  </body>
+</html>
